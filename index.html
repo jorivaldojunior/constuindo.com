@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços de Gerenciamento e Construção</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>GMP</h1>
+        <!-- Menu para telas maiores -->
+        <nav>
+            <a href="#hero">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#services">Serviços</a>
+            <a href="#contact">Contato</a>
+        </nav>
+        <!-- Menu hamburguer para telas pequenas -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Menu móvel oculto inicialmente -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#hero" onclick="toggleMenu()">Início</a>
+            <a href="#about" onclick="toggleMenu()">Sobre</a>
+            <a href="#services" onclick="toggleMenu()">Serviços</a>
+            <a href="#contact" onclick="toggleMenu()">Contato</a>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="hero" class="hero">
+        <div class="section-content">
+            <h1>Qualidade em nossas soluções e serviços...</h1>
+            <p>Do projeto ao acabamento, o gerenciamento que você precisa para o sucesso do seu empreendimento.</p>
+            <a href="#contact">Fale Conosco</a>
+        </div>
+    </section>
+
+    <!-- Sobre o Profissional -->
+    <section id="about">
+        <div class="section-content">
+            <h2>Sobre o Profissional</h2>
+            <p>Com formação em Técnico em Edificações e vasta experiência como Gerente de Manutenção e Mestre de Obras,
+                oferecemos um serviço completo de construção e gerenciamento, do planejamento até a entrega final. Experiência
+                em liderança de equipes e conhecimento técnico em elétrica, hidráulica e marcenaria, garantindo qualidade e
+                eficiência em cada etapa do projeto.</p>
+        </div>
+    </section>
+
+    <!-- Serviços Oferecidos -->
+    
+    <section id="services">
+        <div class="section-content">
+            <h2>Serviços Oferecidos</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <img src="./image/obra2.jfif" alt="Construção Residencial">
+                    <div class="service-card-content">
+                        <h3>Construção Residencial</h3>
+                        <p>Serviços completos de construção, desde a fundação até o acabamento, garantindo qualidade e segurança.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="./image/obra3.jfif" alt="Reformas e Manutenção">
+                    <div class="service-card-content">
+                        <h3>Reformas e Manutenção</h3>
+                        <p>Reformas personalizadas e serviços de manutenção para garantir a funcionalidade e estética do seu espaço.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="./image/gerenciamento.proj.jfif" alt="Gerenciamento de Projetos">
+                    <div class="service-card-content">
+                        <h3>Gerenciamento de Projetos</h3>
+                        <p>Planejamento e supervisão de projetos de construção, desde o orçamento até a conclusão.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="./image/consultoria.jfif" alt="Consultoria Técnica">
+                    <div class="service-card-content">
+                        <h3>Consultoria Técnica</h3>
+                        <p>Avaliação e orientação técnica em projetos de construção para garantir segurança e eficiência.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="./image/eletrica.jfif" alt="Instalações Hidráulicas e Elétricas">
+                    <div class="service-card-content">
+                        <h3>Instalações Hidráulicas e Elétricas</h3>
+                        <p>Serviços especializados em instalação e manutenção de sistemas hidráulicos e elétricos.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="./image/personalizados.jfif" alt="Projetos Personalizados">
+                    <div class="service-card-content">
+                        <h3>Projetos Personalizados</h3>
+                        <p>Desenvolvimento de projetos personalizados de acordo com as necessidades e estilo do cliente.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="./image/ar.jfif" alt="Instalação e Manutenção de Ar Condicionado">
+                    <div class="service-card-content">
+                        <h3>Instalação e Manutenção de Ar Condicionado</h3>
+                        <p>Serviços de instalação, manutenção e limpeza de sistemas de ar condicionado para residências e empresas.</p>
+                    </div>
+                </div>
+            
+
+                <div class="service-card">
+                    <img src="./image/moveis.jfif" alt="Moveis Planejados">
+                    <div class="service-card-content">
+                        <h3>Moveis Planejados</h3>
+                        <p>Serviços de instalação, manutenção e limpeza de sistemas de ar condicionado para residências e empresas.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact">
+        <div class="section-content">
+            <h2>Entre em Contato</h2>
+            <form id="contactForm" class="contact-form" onsubmit="sendWhatsAppMessage(event)">
+                <input type="text" name="name" id="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" id="email" placeholder="Seu Email" required>
+                <textarea name="message" id="message" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Serviços de Construção e Gerenciamento. Todos os direitos reservados.</p>
+        <div>
+            <a href="https://www.linkedin.com/in/jorivaldo-azevedo?trk=contact-info" target="_blank">Desenvolvido por...</a>
+        </div>
+    </footer>
+
+  <script src="./scripit.js"></script>
+   
+
+</body>
+
+</html>
